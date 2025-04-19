@@ -1,0 +1,165 @@
+baseURL: "localhost:1313/"
+languageCode: "en-us"
+title: "Your Name"
+theme: hugo-profile
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML", "RSS"]
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 5
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog Posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Photo Gallery
+      url: /gallery
+      weight: 2
+
+params:
+  title: "Prayash Maharjan"
+  description: "Cybersecurity | Developer | Tinkerer"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Prayash Maharjan"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, I'm"
+    title: "Prayash Maharjan"
+    subtitle: "I break, build & secure things"
+    content: "Cybersecurity enthusiast and developer exploring full-stack apps and home lab automation. Based in Kathmandu, I tinker with Docker, Linux, and open source tech."
+    image: /images/Profile.jpg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "/images/Prayash Maharjan - Resume.pdf"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/Prayash-M
+        - icon: fab fa-instagram
+          url: https://instagram.com/prayash_mhzn
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/prayash-maharjan
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/Profile.jpg"
+    content: |-
+      I'm a cybersecurity student and home lab builder with a passion for Linux, networking, and automation. I run my own cloud from home using Docker, Nginx Proxy Manager, and a stack of services to explore self-hosting and privacy-first technologies.
+
+      My journey includes mastering ethical hacking, learning web app security, and crafting useful scripts in Bash and Python to make life easier (and cooler).
+    skills:
+      enable: true
+      title: "Technologies I tinker with:"
+      items:
+        - "Linux"
+        - "Docker"
+        - "Python"
+        - "Hugo"
+        - "Nginx"
+        - "Cybersecurity Tools"
+
+  experience:
+    enable: false
+
+  education:
+    enable: true
+    items:
+      - title: "Bachelor's in Information Technology"
+        school:
+          name: "Presidential Graduate School"
+          url: "presidential.edu.np"
+        date: "2022 - Present"
+        GPA: "3.88"
+        content: |-
+          - Courses: Network Security, Digital Forensics, Ethical Hacking
+          - Projects: Web App Pentesting, Home Lab Automation
+      - title: "High School - Science Faculty"
+        school:
+          name: "Trinity International College"
+          url: "https://www.trinity.edu.np/"
+        date: "2019 - 2021"
+        GPA: "2.72"
+        # Change the content to reflect your high school experience
+        content: |-
+          - Courses: Network Security, Digital Forensics, Ethical Hacking
+          - Projects: Web App Pentesting, Home Lab Automation
+      - title: "Secondary School"
+        school:
+          name: "Rosebud School"
+          url: "https://rosebudschoolnepal.org/"
+        date: "2019"
+        GPA: "3.43"
+        # Change the content to reflect your secondary school experience
+        content: |-
+          - Courses: Network Security, Digital Forensics, Ethical Hacking
+          - Projects: Web App Pentesting, Home Lab Automation
+
+
+  projects:
+    enable: true
+    items:
+      - title: "Portfolio Site"
+        content: Built this site using Hugo + Docker, hosted on a home server behind a secure tunnel.
+        image: /images/projects/portfolio.png
+        featured:
+          name: "Visit site"
+          url: "https://prayashm.com.np"
+      - title: "Nextcloud Setup"
+        content: Hosted personal cloud storage with Nextcloud using Docker, secured with Cloudflare Tunnel.
+        image: /images/projects/nextcloud.png
+        featured:
+          name: "Read Guide"
+          url: "#"
+
+  contact:
+    enable: true
+    content: "Got a project, question, or just want to say hi?"
+    email: prayash.mhrjn@gmail.com
+    btnName: "Email Me"
